@@ -18,8 +18,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var createAccountBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        //self.view.backgroundColor = UIColor.viewColor
+        emailTextField.underlinedTextField()
+        passwordTextField.underlinedTextField()
+        createAccountBtn.createUnderlindedButton(title: "Create Account")
+        loginBtn.createLoginButtons()
     }
     
     @IBAction func createAccountTapped(_ sender: Any) {

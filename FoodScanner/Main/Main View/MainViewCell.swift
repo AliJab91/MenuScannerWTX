@@ -10,9 +10,16 @@ import UIKit
 
 class MainViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var itemIcon: UIImageView!
+    @IBOutlet weak var itemNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func fillCell(with item:IconDetails)   {
+        itemNameLabel.text  = item.name
+        itemIcon.image = item.iconImage
     }
 
 }

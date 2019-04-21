@@ -9,10 +9,11 @@
 import UIKit
 
 class RegistrationViewController: UIViewController {
-
+    @IBOutlet weak var registerBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    registerBtn.createLoginButtons()
      
     }
     

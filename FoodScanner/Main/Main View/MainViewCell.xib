@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="99" height="105"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="fdL-xi-d2B">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="fdL-xi-d2B">
                         <rect key="frame" x="0.0" y="0.0" width="99" height="84"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUk-R8-yF5">
@@ -41,10 +41,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="99" height="105"/>
+            <connections>
+                <outlet property="itemIcon" destination="fdL-xi-d2B" id="MAo-2a-pdZ"/>
+                <outlet property="itemNameLabel" destination="gUk-R8-yF5" id="hIl-Uk-itk"/>
+            </connections>
             <point key="canvasLocation" x="176.80000000000001" y="179.46026986506749"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="settings" width="256" height="256"/>
-    </resources>
 </document>

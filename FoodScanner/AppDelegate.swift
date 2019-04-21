@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func setNavigationBar()  {
         UINavigationBar .appearance().tintColor = UIColor.white
-        UINavigationBar .appearance().barTintColor = UIColor(red:0.00, green:0.00, blue:1.00, alpha:1.0)
+        UINavigationBar .appearance().barTintColor = UIColor.viewColor
         UINavigationBar.appearance().isTranslucent = false
         let attributes : Dictionary = [NSAttributedString.Key.foregroundColor : UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = attributes

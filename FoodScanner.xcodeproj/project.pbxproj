@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4EE128952267C58500196EED /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE128942267C58500196EED /* AboutUsViewController.swift */; };
+		4EE12898226B3B1900196EED /* IconDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE12897226B3B1900196EED /* IconDetails.swift */; };
+		4EE1289B226B507F00196EED /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1289A226B507F00196EED /* Protocols.swift */; };
+		4EE1289D226B548D00196EED /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1289C226B548D00196EED /* Extensions.swift */; };
+		4EE128A0226B63E600196EED /* CoreDataRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1289F226B63E600196EED /* CoreDataRequests.swift */; };
+		4EE128A3226B662400196EED /* imageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE128A1226B662400196EED /* imageCell.swift */; };
+		4EE128A4226B662400196EED /* imageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE128A2226B662400196EED /* imageCell.xib */; };
+		4EE128A6226B672200196EED /* AlbumViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE128A5226B672200196EED /* AlbumViewViewModel.swift */; };
+		4EE128A8226CAEFF00196EED /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE128A7226CAEFF00196EED /* Images.swift */; };
+		4EE128AA226CAFDB00196EED /* UserdefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE128A9226CAFDB00196EED /* UserdefaultHelper.swift */; };
 		4EE59B46226378520012C557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE59B45226378520012C557 /* AppDelegate.swift */; };
-		4EE59B48226378520012C557 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE59B47226378520012C557 /* ViewController.swift */; };
 		4EE59B4B226378520012C557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE59B49226378520012C557 /* Main.storyboard */; };
 		4EE59B4E226378520012C557 /* FoodScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EE59B4C226378520012C557 /* FoodScanner.xcdatamodeld */; };
 		4EE59B50226378530012C557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EE59B4F226378530012C557 /* Assets.xcassets */; };
@@ -42,9 +50,17 @@
 /* Begin PBXFileReference section */
 		40D485590108561E61050EFA /* Pods-FoodScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodScanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodScanner/Pods-FoodScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		4EE128942267C58500196EED /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		4EE12897226B3B1900196EED /* IconDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconDetails.swift; sourceTree = "<group>"; };
+		4EE1289A226B507F00196EED /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		4EE1289C226B548D00196EED /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4EE1289F226B63E600196EED /* CoreDataRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRequests.swift; sourceTree = "<group>"; };
+		4EE128A1226B662400196EED /* imageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCell.swift; sourceTree = "<group>"; };
+		4EE128A2226B662400196EED /* imageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = imageCell.xib; sourceTree = "<group>"; };
+		4EE128A5226B672200196EED /* AlbumViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewViewModel.swift; sourceTree = "<group>"; };
+		4EE128A7226CAEFF00196EED /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		4EE128A9226CAFDB00196EED /* UserdefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserdefaultHelper.swift; sourceTree = "<group>"; };
 		4EE59B42226378510012C557 /* FoodScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE59B45226378520012C557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4EE59B47226378520012C557 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4EE59B4A226378520012C557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EE59B4D226378520012C557 /* FoodScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodScanner.xcdatamodel; sourceTree = "<group>"; };
 		4EE59B4F226378530012C557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +123,32 @@
 			path = AboutUsVC;
 			sourceTree = "<group>";
 		};
+		4EE12896226B3AFA00196EED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EE12897226B3B1900196EED /* IconDetails.swift */,
+				4EE128A7226CAEFF00196EED /* Images.swift */,
+				4EE128A9226CAFDB00196EED /* UserdefaultHelper.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4EE12899226B506D00196EED /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4EE1289A226B507F00196EED /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4EE1289E226B63CB00196EED /* CoreDataModules */ = {
+			isa = PBXGroup;
+			children = (
+				4EE1289F226B63E600196EED /* CoreDataRequests.swift */,
+			);
+			path = CoreDataModules;
+			sourceTree = "<group>";
+		};
 		4EE59B39226378510012C557 = {
 			isa = PBXGroup;
 			children = (
@@ -130,11 +172,13 @@
 		4EE59B44226378510012C557 /* FoodScanner */ = {
 			isa = PBXGroup;
 			children = (
+				4EE1289E226B63CB00196EED /* CoreDataModules */,
+				4EE12899226B506D00196EED /* Protocols */,
+				4EE12896226B3AFA00196EED /* Models */,
 				4EE59B7E2263A9120012C557 /* Extensions */,
 				4EE59B722263820A0012C557 /* Main */,
 				4EE59B6E22637B270012C557 /* Authentication */,
 				4EE59B45226378520012C557 /* AppDelegate.swift */,
-				4EE59B47226378520012C557 /* ViewController.swift */,
 				4EE59B4F226378530012C557 /* Assets.xcassets */,
 				4EE59B51226378530012C557 /* LaunchScreen.storyboard */,
 				4EE59B54226378530012C557 /* Info.plist */,
@@ -222,6 +266,9 @@
 			isa = PBXGroup;
 			children = (
 				4EE59B7A2263841C0012C557 /* AlbumViewController.swift */,
+				4EE128A1226B662400196EED /* imageCell.swift */,
+				4EE128A2226B662400196EED /* imageCell.xib */,
+				4EE128A5226B672200196EED /* AlbumViewViewModel.swift */,
 			);
 			path = AlbumVC;
 			sourceTree = "<group>";
@@ -229,6 +276,7 @@
 		4EE59B7E2263A9120012C557 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4EE1289C226B548D00196EED /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EE59B6A22637A200012C557 /* Authentication.storyboard in Resources */,
+				4EE128A4226B662400196EED /* imageCell.xib in Resources */,
 				4EE59B53226378530012C557 /* LaunchScreen.storyboard in Resources */,
 				4EE59B50226378530012C557 /* Assets.xcassets in Resources */,
 				4EE59B4B226378520012C557 /* Main.storyboard in Resources */,
@@ -409,18 +458,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE128A0226B63E600196EED /* CoreDataRequests.swift in Sources */,
 				4EE59B6D22637A990012C557 /* LoginViewController.swift in Sources */,
-				4EE59B48226378520012C557 /* ViewController.swift in Sources */,
 				4EE59B842263B6330012C557 /* MainViewViewModel.swift in Sources */,
+				4EE128A6226B672200196EED /* AlbumViewViewModel.swift in Sources */,
 				4EE59B4E226378520012C557 /* FoodScanner.xcdatamodeld in Sources */,
 				4EE128952267C58500196EED /* AboutUsViewController.swift in Sources */,
 				4EE59B75226383BC0012C557 /* MainViewController.swift in Sources */,
 				4EE59B7D226395B90012C557 /* LoginViewViewModel.swift in Sources */,
 				4EE59B812263B4D30012C557 /* MainViewCell.swift in Sources */,
 				4EE59B7B2263841C0012C557 /* AlbumViewController.swift in Sources */,
+				4EE12898226B3B1900196EED /* IconDetails.swift in Sources */,
+				4EE1289B226B507F00196EED /* Protocols.swift in Sources */,
 				4EE59B78226383ED0012C557 /* CameraViewController.swift in Sources */,
+				4EE128A8226CAEFF00196EED /* Images.swift in Sources */,
+				4EE128AA226CAFDB00196EED /* UserdefaultHelper.swift in Sources */,
 				4EE59B46226378520012C557 /* AppDelegate.swift in Sources */,
+				4EE128A3226B662400196EED /* imageCell.swift in Sources */,
 				4EE59B7122637BC90012C557 /* RegistrationViewController.swift in Sources */,
+				4EE1289D226B548D00196EED /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
