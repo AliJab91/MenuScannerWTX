@@ -8,6 +8,9 @@ target 'FoodScanner' do
   # Pods for FoodScanner
 pod 'PixelEngine'
 pod 'PixelEditor'
+ pod 'SVProgressHUD'
+  pod 'Alamofire', '~> 4.5'
+pod 'IQKeyboardManager'
   target 'FoodScannerTests' do
     inherit! :search_paths
     # Pods for testing

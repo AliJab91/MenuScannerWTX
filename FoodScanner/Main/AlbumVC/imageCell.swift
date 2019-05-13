@@ -16,8 +16,10 @@ class imageCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func fillCellWithImage(image:UIImage)  {
-        imageView.image = image
+    func fillCellWithImage(image:ImageObject)  {
+//        if let imgData = image.image {
+            imageView.image = image.image
+        //}
     }
 
 }

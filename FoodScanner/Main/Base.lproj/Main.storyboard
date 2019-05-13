@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VTI-Fu-Qr7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VTI-Fu-Qr7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -156,17 +156,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aabout us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2y-sJ-3aC">
-                                <rect key="frame" x="143" y="150" width="76" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aabout us" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2y-sJ-3aC">
+                                <rect key="frame" x="20" y="251" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-cr-GTx">
+                                <rect key="frame" x="90" y="101" width="195" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5PD-cr-GTx" secondAttribute="height" multiplier="249:128" id="My7-gg-mYL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoF-kC-VzO">
+                                <rect key="frame" x="20" y="294" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5PD-cr-GTx" firstAttribute="centerX" secondItem="WVt-wW-dXu" secondAttribute="centerX" id="0L9-Hr-ogT"/>
+                            <constraint firstItem="5PD-cr-GTx" firstAttribute="top" secondItem="WVt-wW-dXu" secondAttribute="top" constant="37" id="2IE-xZ-ljf"/>
+                            <constraint firstItem="a2y-sJ-3aC" firstAttribute="leading" secondItem="WVt-wW-dXu" secondAttribute="leading" constant="20" id="Okw-63-ZsP"/>
+                            <constraint firstItem="WVt-wW-dXu" firstAttribute="trailing" secondItem="a2y-sJ-3aC" secondAttribute="trailing" constant="20" id="TLu-6o-qvF"/>
+                            <constraint firstItem="WVt-wW-dXu" firstAttribute="trailing" secondItem="CoF-kC-VzO" secondAttribute="trailing" constant="20" id="ddQ-xf-oKM"/>
+                            <constraint firstItem="CoF-kC-VzO" firstAttribute="leading" secondItem="WVt-wW-dXu" secondAttribute="leading" constant="20" id="dgK-Ew-IBw"/>
+                            <constraint firstItem="a2y-sJ-3aC" firstAttribute="centerX" secondItem="WVt-wW-dXu" secondAttribute="centerX" id="sy1-BK-LRx"/>
+                            <constraint firstItem="5PD-cr-GTx" firstAttribute="leading" secondItem="WVt-wW-dXu" secondAttribute="leading" constant="90" id="tV5-bg-svj"/>
+                            <constraint firstItem="a2y-sJ-3aC" firstAttribute="top" secondItem="5PD-cr-GTx" secondAttribute="bottom" constant="50" id="urk-PD-aET"/>
+                            <constraint firstItem="CoF-kC-VzO" firstAttribute="top" secondItem="a2y-sJ-3aC" secondAttribute="bottom" constant="22.5" id="xH7-fu-IGR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WVt-wW-dXu"/>
                     </view>
+                    <connections>
+                        <outlet property="aboutUsLabel" destination="a2y-sJ-3aC" id="ALr-yV-ueg"/>
+                        <outlet property="contactUsEmailLabel" destination="CoF-kC-VzO" id="8BG-kI-t4I"/>
+                        <outlet property="imageView" destination="5PD-cr-GTx" id="UbA-5x-XUJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJg-4l-jxR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,4 +219,7 @@
             <point key="canvasLocation" x="615" y="286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="60" height="60"/>
+    </resources>
 </document>

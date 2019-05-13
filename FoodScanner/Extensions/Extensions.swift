@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SVProgressHUD
 extension UIViewController {
     
 }
@@ -56,5 +57,35 @@ extension UITextField {
         border.borderWidth = width
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
+    }
+}
+
+extension Dictionary where Key :
+ExpressibleByStringLiteral {
+    subscript(jsonKey:APIKeys)-> Value? {
+        get {
+            return self[jsonKey.rawValue as! Key]
+        }
+        set {
+            self[jsonKey.rawValue as! Key] = newValue
+        }
+    }
+}
+
+
+extension UIViewController {
+    func showLoader()  {
+        SVProgressHUD.show()
+    }
+    
+    func hideLoader()  {
+        SVProgressHUD.dismiss()
+    }
+    
+    func showAlert(title:String, body:String)  {
+        let alertVC = UIAlertController(title: title, message: body, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertVC.addAction(okAction)
+        self.present(alertVC, animated: true, completion: nil)
     }
 }

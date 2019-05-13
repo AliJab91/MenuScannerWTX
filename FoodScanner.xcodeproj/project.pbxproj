@@ -17,6 +17,9 @@
 		4EE128A6226B672200196EED /* AlbumViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE128A5226B672200196EED /* AlbumViewViewModel.swift */; };
 		4EE128A8226CAEFF00196EED /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE128A7226CAEFF00196EED /* Images.swift */; };
 		4EE128AA226CAFDB00196EED /* UserdefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE128A9226CAFDB00196EED /* UserdefaultHelper.swift */; };
+		4EE128AD2270D86F00196EED /* APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE128AC2270D86F00196EED /* APIRequests.swift */; };
+		4EE128AF2270E97900196EED /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE128AE2270E97900196EED /* User.swift */; };
+		4EE128B12272355000196EED /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE128B02272355000196EED /* APIKeys.swift */; };
 		4EE59B46226378520012C557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE59B45226378520012C557 /* AppDelegate.swift */; };
 		4EE59B4B226378520012C557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE59B49226378520012C557 /* Main.storyboard */; };
 		4EE59B4E226378520012C557 /* FoodScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EE59B4C226378520012C557 /* FoodScanner.xcdatamodeld */; };
@@ -59,6 +62,9 @@
 		4EE128A5226B672200196EED /* AlbumViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewViewModel.swift; sourceTree = "<group>"; };
 		4EE128A7226CAEFF00196EED /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		4EE128A9226CAFDB00196EED /* UserdefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserdefaultHelper.swift; sourceTree = "<group>"; };
+		4EE128AC2270D86F00196EED /* APIRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequests.swift; sourceTree = "<group>"; };
+		4EE128AE2270E97900196EED /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4EE128B02272355000196EED /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		4EE59B42226378510012C557 /* FoodScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE59B45226378520012C557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EE59B4A226378520012C557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,6 +135,8 @@
 				4EE12897226B3B1900196EED /* IconDetails.swift */,
 				4EE128A7226CAEFF00196EED /* Images.swift */,
 				4EE128A9226CAFDB00196EED /* UserdefaultHelper.swift */,
+				4EE128AE2270E97900196EED /* User.swift */,
+				4EE128B02272355000196EED /* APIKeys.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +155,14 @@
 				4EE1289F226B63E600196EED /* CoreDataRequests.swift */,
 			);
 			path = CoreDataModules;
+			sourceTree = "<group>";
+		};
+		4EE128AB2270D85100196EED /* Web Requests */ = {
+			isa = PBXGroup;
+			children = (
+				4EE128AC2270D86F00196EED /* APIRequests.swift */,
+			);
+			path = "Web Requests";
 			sourceTree = "<group>";
 		};
 		4EE59B39226378510012C557 = {
@@ -172,6 +188,7 @@
 		4EE59B44226378510012C557 /* FoodScanner */ = {
 			isa = PBXGroup;
 			children = (
+				4EE128AB2270D85100196EED /* Web Requests */,
 				4EE1289E226B63CB00196EED /* CoreDataModules */,
 				4EE12899226B506D00196EED /* Protocols */,
 				4EE12896226B3AFA00196EED /* Models */,
@@ -402,13 +419,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FoodScanner/Pods-FoodScanner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/PixelEditor/PixelEditor.framework",
 				"${BUILT_PRODUCTS_DIR}/PixelEngine/PixelEngine.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PixelEditor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PixelEngine.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -458,8 +481,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE128B12272355000196EED /* APIKeys.swift in Sources */,
 				4EE128A0226B63E600196EED /* CoreDataRequests.swift in Sources */,
 				4EE59B6D22637A990012C557 /* LoginViewController.swift in Sources */,
+				4EE128AD2270D86F00196EED /* APIRequests.swift in Sources */,
 				4EE59B842263B6330012C557 /* MainViewViewModel.swift in Sources */,
 				4EE128A6226B672200196EED /* AlbumViewViewModel.swift in Sources */,
 				4EE59B4E226378520012C557 /* FoodScanner.xcdatamodeld in Sources */,
@@ -477,6 +502,7 @@
 				4EE128A3226B662400196EED /* imageCell.swift in Sources */,
 				4EE59B7122637BC90012C557 /* RegistrationViewController.swift in Sources */,
 				4EE1289D226B548D00196EED /* Extensions.swift in Sources */,
+				4EE128AF2270E97900196EED /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

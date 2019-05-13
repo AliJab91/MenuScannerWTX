@@ -13,16 +13,17 @@ import PixelEngine
 class MainViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     private let menuViewModel = MainViewViewModel()
-    
-    private lazy var stack = SquareEditingStack.init(
-        source: ImageSource(source: UIImage(named: "Album")!),
-        previewSize: CGSize(width: 300, height: 300),
-        colorCubeStorage: ColorCubeStorage.default
-    )
+   
+//    private lazy var stack = SquareEditingStack.init(
+//        source: ImageSource(source: UIImage(named: "Album")!),
+//        previewSize: CGSize(width: 300, height: 300),
+//        colorCubeStorage: ColorCubeStorage.default
+//    )
   
     var imagePicker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUpCollectionView()
         menuViewModel.fillCollectionItems()
         imagePicker.allowsEditing = false
@@ -32,6 +33,10 @@ class MainViewController: UIViewController {
             UserdefaultHelper.setImageId(uId: 1)
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
    private func setUpCollectionView()  {
@@ -49,9 +54,25 @@ extension MainViewController:UICollectionViewDelegate {
             case 1 : openAlbumView()
             default:break
             }
-        }else {
-            goToAboutView()
+        }else if indexPath.section == 1 {
+            switch indexPath.row {
+            case 0: goToAboutView()
+            case 1: logout()
+            default:break
+            }
         }
+    }
+    func logout()  {
+            UserdefaultHelper.loggetOut()
+            let authStoryboard = UIStoryboard(name: "Authentication", bundle: nil)
+            let loginVC = authStoryboard.instantiateViewController(withIdentifier: "loginNav")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = loginVC
+            let navigationController = self.presentingViewController as? UINavigationController
+            self.dismiss(animated: true) {
+                let _ = navigationController?.popToRootViewController(animated: true)
+            }
+        
     }
     
     func goToAboutView() {
@@ -83,7 +104,7 @@ extension MainViewController:UICollectionViewDataSource {
     }
     
     func showAlert()  {
-        let alertVC = UIAlertController(title: "", message: "Please choose your image source:", preferredStyle: .alert)
+        let alertVC = UIAlertController(title: "", message: "Please choose your image source:", preferredStyle: .actionSheet)
         let cameraAction = UIAlertAction(title: "Camera", style: .default) { (alert) in
             self.imagePicker.sourceType = .camera
             self.present(self.imagePicker, animated: true, completion: nil)
@@ -92,8 +113,10 @@ extension MainViewController:UICollectionViewDataSource {
             self.imagePicker.sourceType = .photoLibrary
             self.present(self.imagePicker, animated: true, completion: nil)
         }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertVC.addAction(cameraAction)
         alertVC.addAction(libraryAction)
+        alertVC.addAction(cancelAction)
         self.present(alertVC, animated: true, completion: nil)
     }
 
@@ -101,7 +124,7 @@ extension MainViewController:UICollectionViewDataSource {
 
 extension MainViewController:UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 125, height: 125)
+        return CGSize(width: self.view.frame.size.width / 2 - 50, height: self.view.frame.size.height / 4)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 25, left: 30, bottom: 10, right: 30)
@@ -111,17 +134,14 @@ extension MainViewController:UICollectionViewDelegateFlowLayout {
 extension MainViewController : PixelEditViewControllerDelegate {
     
     func pixelEditViewController(_ controller: PixelEditViewController, didEndEditing editingStack: SquareEditingStack) {
-       
         let image = editingStack.makeRenderer().render(resolution: .full)
         CoreDataFunctions.saveImageById( image: image)
-//        self.imageView.image = image
         self.navigationController?.popToViewController(self, animated: true)
     }
     
     func pixelEditViewControllerDidCancelEditing(in controller: PixelEditViewController) {
         self.navigationController?.popToViewController(self, animated: true)
     }
-    
 }
 
 extension MainViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
@@ -131,9 +151,7 @@ extension MainViewController:UIImagePickerControllerDelegate,UINavigationControl
             let controller = PixelEditViewController.init(
                 image: image
             )
-            
             controller.delegate = self
-            
             navigationController?.pushViewController(controller, animated: true)
         }
     }

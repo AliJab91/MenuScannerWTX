@@ -14,6 +14,7 @@ class MainViewCell: UICollectionViewCell {
     @IBOutlet weak var itemNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        itemNameLabel.adjustsFontSizeToFitWidth = true
         // Initialization code
     }
     

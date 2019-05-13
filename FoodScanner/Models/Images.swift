@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 struct ImageObject {
-    var image:UIImage?
-    var imageId:Int?
+    var image:UIImage
+    var imageId:Int
     init(image:UIImage, imageId:Int) {
         self.image = image
         self.imageId = imageId

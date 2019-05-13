@@ -13,15 +13,15 @@ class CoreDataFunctions {
     static fileprivate let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static func saveImageById( image:UIImage)  {
         let context = appDelegate.persistentContainer.viewContext
-        let newImage = NSEntityDescription.insertNewObject(forEntityName: "Images", into: context)
+        let newImage = NSEntityDescription.insertNewObject(forEntityName: keys.entityName, into: context)
         let imageData =   image.pngData()
         var imageId:Int!
          let id = UserdefaultHelper.getImageId() as? Int
+        newImage.setValue(id, forKey: keys.imageId)
+        newImage.setValue(imageData, forKey: keys.imageKey)
         do{
-            try context.save()
-            newImage.setValue(id, forKey: keys.imageId)
-            newImage.setValue(imageData, forKey: keys.imageKey)
             UserdefaultHelper.incrementUserId()
+              try context.save()
          //   NotificationCenter.default.post(name: Notification.Name("successSave"), object: nil)
           //  UserDefaultHelper.saveUserId(userId: userId)
         }catch {
@@ -29,24 +29,35 @@ class CoreDataFunctions {
         }
     }
     
-    static func retrieveImages() -> [NSManagedObject] {
+    static func retrieveImages() -> [ImageObject] {
         let emptyArray = [NSManagedObject]()
         let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Images")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName:keys.entityName)
         do {
             let fetchedResults = try context.fetch(request)
-            if let user = fetchedResults as? [NSManagedObject]{
-                return user
-            }
+            if let images = fetchedResults as? [NSManagedObject]{
+                var array = [ImageObject]()
+                for image in images {
+                    if let imageId = image.value(forKey: keys.imageId) as? Int {
+                    if let imageAsImg = (image.value(forKey: keys.imageKey) as? Data)  {
+                        let imageObject = ImageObject(image: UIImage(data:imageAsImg )!, imageId: imageId)
+                        
+                       
+                        array.append(imageObject)
+                    }
+                }
+                }
+                return array
+            }//locations = context.executeFetchRequest(fetchRequest, error: nil) as [Locations]
         }catch {
             print("could not fetch")
         }
-        return emptyArray
+        return []
     }
     
    static func deleteImageById(id:Int)  {
         let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Images")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: keys.entityName)
         request.predicate = NSPredicate(format: "imageIdKey = %@",id)
         request.returnsObjectsAsFaults = false
         do {
@@ -62,6 +73,7 @@ class CoreDataFunctions {
 }
 
 enum keys {
+    static var entityName = "Images"
     static var imageId = "imageIdKey"
     static let imageKey = "imageKey"
 }
