@@ -1,0 +1,33 @@
+PODS:
+  - Alamofire (4.8.2)
+  - IQKeyboardManager (6.2.1)
+  - PixelEditor (0.0.8):
+    - PixelEngine
+  - PixelEngine (0.0.8)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - IQKeyboardManager
+  - PixelEditor
+  - PixelEngine
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - IQKeyboardManager
+    - PixelEditor
+    - PixelEngine
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
+  PixelEditor: e086496132baffa1b8428efac1ab9b7ac739ef25
+  PixelEngine: fe2b257a362586dcbeab1d4b4bf30dc19a7c0f61
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 0b29282965038fac462659567e0028715fdf545c
+
+COCOAPODS: 1.5.3
