@@ -29,8 +29,10 @@ class RegistrationViewController: UIViewController {
             if name.count > 0 && username.count > 0 && email.count > 0 && password.count > 0 && memorablePlaces.count > 0 && backupEmail.count > 0 && companyName.count > 0 {
                 self.showLoader()
                 APIRequests.checkIfEmailExistWithEmail(email: email) { (success, error) in
+                    self.hideLoader()
                     if(success) {
                         APIRequests.checkIfUsernameExistWithName(username: username, completion: { (success, error) in
+                            self.hideLoader()
                             if success {
                                 APIRequests.registerUserWithName(name: name, usename: username, email: email, password: password, memorablePlaces: memorablePlaces, backupEmail: backupEmail, companyName: companyName) { (success, error) in
                                     self.hideLoader()
