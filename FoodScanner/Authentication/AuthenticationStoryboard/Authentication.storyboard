@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mO6-nj-stX">
-                                                <rect key="frame" x="37.5" y="223" width="300" height="45"/>
+                                                <rect key="frame" x="37.5" y="247" width="300" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="rZn-m6-jMe"/>
                                                     <constraint firstAttribute="height" constant="45" id="xVQ-zn-LOP"/>
@@ -35,7 +35,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Saf-UK-z9z">
-                                                <rect key="frame" x="50" y="388" width="275" height="50"/>
+                                                <rect key="frame" x="50" y="412" width="275" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="s2u-38-Jzp"/>
                                                 </constraints>
@@ -63,22 +63,22 @@
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gxt-2A-7TF">
-                                                <rect key="frame" x="80" y="51" width="215" height="138"/>
+                                                <rect key="frame" x="45" y="30" width="285" height="183"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="gxt-2A-7TF" secondAttribute="height" multiplier="215:138" id="uwo-Us-2Cy"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3aH-ij-TOP">
-                                                <rect key="frame" x="37.5" y="293" width="300" height="45"/>
+                                                <rect key="frame" x="37.5" y="317" width="300" height="45"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="gxt-2A-7TF" secondAttribute="trailing" constant="80" id="2MD-Kp-UEB"/>
+                                            <constraint firstAttribute="trailing" secondItem="gxt-2A-7TF" secondAttribute="trailing" constant="45" id="2MD-Kp-UEB"/>
                                             <constraint firstAttribute="bottom" secondItem="Grh-5B-KDT" secondAttribute="bottom" constant="58" id="9Pu-Rw-LnW"/>
-                                            <constraint firstItem="gxt-2A-7TF" firstAttribute="top" secondItem="kyo-7c-ucP" secondAttribute="top" constant="51" id="Alo-xY-vd6"/>
+                                            <constraint firstItem="gxt-2A-7TF" firstAttribute="top" secondItem="kyo-7c-ucP" secondAttribute="top" constant="30" id="Alo-xY-vd6"/>
                                             <constraint firstItem="wbv-EQ-PRT" firstAttribute="centerX" secondItem="kyo-7c-ucP" secondAttribute="centerX" id="HMe-Rk-BDL"/>
                                             <constraint firstItem="Saf-UK-z9z" firstAttribute="leading" secondItem="kyo-7c-ucP" secondAttribute="leading" constant="50" id="IrS-XO-aLJ"/>
                                             <constraint firstItem="Grh-5B-KDT" firstAttribute="centerX" secondItem="kyo-7c-ucP" secondAttribute="centerX" id="KFw-o5-zCL"/>
@@ -281,6 +281,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="60" height="60"/>
+        <image name="logo" width="90" height="90"/>
     </resources>
 </document>
