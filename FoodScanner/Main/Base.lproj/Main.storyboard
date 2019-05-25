@@ -157,19 +157,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aabout us" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2y-sJ-3aC">
-                                <rect key="frame" x="20" y="251" width="335" height="20.5"/>
+                                <rect key="frame" x="20" y="267.5" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-cr-GTx">
-                                <rect key="frame" x="90" y="101" width="195" height="100"/>
+                                <rect key="frame" x="50" y="101" width="275" height="141.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5PD-cr-GTx" secondAttribute="height" multiplier="249:128" id="My7-gg-mYL"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoF-kC-VzO">
-                                <rect key="frame" x="20" y="294" width="335" height="21"/>
+                                <rect key="frame" x="20" y="310.5" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -184,8 +184,8 @@
                             <constraint firstItem="WVt-wW-dXu" firstAttribute="trailing" secondItem="CoF-kC-VzO" secondAttribute="trailing" constant="20" id="ddQ-xf-oKM"/>
                             <constraint firstItem="CoF-kC-VzO" firstAttribute="leading" secondItem="WVt-wW-dXu" secondAttribute="leading" constant="20" id="dgK-Ew-IBw"/>
                             <constraint firstItem="a2y-sJ-3aC" firstAttribute="centerX" secondItem="WVt-wW-dXu" secondAttribute="centerX" id="sy1-BK-LRx"/>
-                            <constraint firstItem="5PD-cr-GTx" firstAttribute="leading" secondItem="WVt-wW-dXu" secondAttribute="leading" constant="90" id="tV5-bg-svj"/>
-                            <constraint firstItem="a2y-sJ-3aC" firstAttribute="top" secondItem="5PD-cr-GTx" secondAttribute="bottom" constant="50" id="urk-PD-aET"/>
+                            <constraint firstItem="5PD-cr-GTx" firstAttribute="leading" secondItem="WVt-wW-dXu" secondAttribute="leading" constant="50" id="tV5-bg-svj"/>
+                            <constraint firstItem="a2y-sJ-3aC" firstAttribute="top" secondItem="5PD-cr-GTx" secondAttribute="bottom" constant="25" id="urk-PD-aET"/>
                             <constraint firstItem="CoF-kC-VzO" firstAttribute="top" secondItem="a2y-sJ-3aC" secondAttribute="bottom" constant="22.5" id="xH7-fu-IGR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WVt-wW-dXu"/>
@@ -220,6 +220,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="60" height="60"/>
+        <image name="logo" width="90" height="90"/>
     </resources>
 </document>

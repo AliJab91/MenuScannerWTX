@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
       goToRegistration()
     }
     //test@t.com
-    
+    //hi@hi.com
     @IBAction func loginTapped(_ sender: Any) {
         if let username = emailTextField.text , let password = passwordTextField.text {
             if username.count > 0 && password.count > 0 {
